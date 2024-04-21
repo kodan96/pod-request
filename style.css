@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --green: #54E6AF;
+    --bg: #121725;
+    --formbg: #20344B;
+    --font: #5a666a;
+    --fontb: #c2cbe5;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Chivo';
+    background-image: url(img/mobile/image-host.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    overflow: hidden;
+}
+
+header{
+    background-color: #121725DD;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+        margin-block: 5rem;
+        height: 70px;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #121725DD;
+    text-align: center;
+    padding-inline: 1rem;
+
+    h1 {
+        color: var(--green);
+        font-weight: 100;
+        font-size: 1.7rem;
+        text-transform: uppercase;
+        line-height: 1.4em;
+        margin-bottom: 1em;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    p {
+        color: var(--fontb);
+        font-weight: 200;
+        line-height: 1.5em;
+        margin-bottom: 3em;
+    }
+
+    .brands {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        order: 0;
+
+        margin-bottom: 4rem;
+
+        img {
+            height: 17px;
+            opacity: .5;
+            
+        }
+    }
+
+    form {
+        order: 1;
+
+        input {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: 700;
+            background-color: #2C344B;
+            padding: 1em 1.5em;
+            color: var(--fontb);
+            border: none;
+            border-radius: 30px;
+            margin-bottom: 1em;
+        }
+
+        a {
+            display: block;
+            padding: 1em;
+            font-weight: 700;
+            color: var(--bg);
+            text-decoration: none;
+            border-radius: 30px;
+            background-color: var(--green);
+        }
+    }
+}
+
+a:hover {
+    background-color: #B3FFE2;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url(img/tablet/image-host.jpg);
+        background-size: auto;
+        background-position: top right;
+        background-color: var(--bg);
+        overflow: auto;
+        height: auto;
+    }
+
+    header {
+        display: block;
+        width: 30%;
+        background-color: #121725;
+
+        .logo {
+            height: 50px;
+            margin: 3rem 2rem 10rem;
+        }
+    }
+
+    main {
+        height: auto;
+        width: 85%;
+        margin: 0 auto;
+        text-align: left;
+        margin-left: 0;
+        background-color: var(--bg);
+
+        .main-header {
+            padding: 5rem 1rem 2em;
+
+            h1 {
+                font-size: 2.8rem;
+                line-height: 1.2em;
+                margin-bottom: .5em;
+            }
+            p {
+                max-width: 70%;
+                line-height: 1.5em;
+                margin-bottom: 1em;
+            }
+        }
+
+        .brands {
+            order: 1;
+            padding-inline: 1rem;
+            margin-bottom: 5rem;
+            img {
+                height: 25px;
+            }
+        }
+
+        form {
+            padding-inline: 1rem;
+            order: 0;
+            .email-wrap {
+                width: 70%;
+                position: relative;
+                input {
+                    width: 100%;
+                    padding-block: 1.3em;
+                    margin-bottom: 5rem;
+                }
+    
+                a {
+                    display: inline-block;
+                    position: absolute;
+                    right: 5px;
+                    top: 4px;
+                }
+            }
+            
+        }
+
+    }
+
+    footer {
+        padding-inline: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        position: relative;
+        background-image: url(img/desktop/image-host.jpg);
+        background-position-y: 110px;
+    }
+    header {
+        padding: 2rem 6rem 0;
+        .logo {
+            margin-bottom: 5rem;
+        }
+        
+    }
+    main {
+        padding-left: 6rem;
+        width: 62%;
+        .main-header {
+            h1 {
+                font-size: 3.5rem;
+            }
+        }
+        input {
+            min-width: 300px;
+        }
+    }
+    footer {
+        img {
+            position: absolute;
+            right: 0;
+            bottom: -15px;
+
+        }
+    }
+}
