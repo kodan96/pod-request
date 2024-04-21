@@ -107,6 +107,10 @@ main {
     }
 }
 
+.hide {
+    display:none;
+}
+
 a:hover {
     background-color: #B3FFE2;
 }
@@ -191,7 +195,9 @@ a:hover {
     footer {
         padding-inline: 2rem;
     }
-
+    .hide {
+        display:inline;
+    }
 }
 
 @media screen and (min-width: 1024px) {
